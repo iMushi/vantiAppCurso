@@ -1,3 +1,14 @@
-<p>
-  lista-compras works!
-</p>
+<div class="row">
+  <div class="col-xs-10">
+    <ul class="list-group">
+      <a class="list-group-item"
+         style="cursor: pointer"
+         (click)="onEditArticulo()"
+         *ngFor="let ingrediente of ingredientes; let i = index">
+        {{i}} -- {{ ingrediente.nombre }} {{ ingrediente.cantidad }}
+      </a>
+    </ul>
+  <hr>
+    <app-lista-editar></app-lista-editar>
+  </div>
+</div>
